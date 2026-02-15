@@ -1,173 +1,237 @@
-# Move 37 Privacy Policy
+# Privacy Policy
 
-**Last Updated:** January 13, 2026
+**Move 37 — Board Game App**  
+**Last Updated:** February 15, 2026
 
-This Privacy Policy applies to the Move 37 mobile application (the "Application" or "App") developed by MUISIK (the "Service Provider" or "we"). This service is provided "AS IS" and is intended for use as a freemium mobile game application.
+---
+
+## Table of Contents
+1. [Information We Collect](#1-information-we-collect)
+2. [How We Use Information](#2-how-we-use-information)
+3. [Third-Party Services](#3-third-party-services)
+4. [Data Sharing](#4-data-sharing)
+5. [GDPR & Privacy Rights](#5-gdpr--privacy-rights)
+6. [Data Security](#6-data-security)
+7. [Data Retention](#7-data-retention)
+8. [Children's Privacy](#8-childrens-privacy)
+9. [Your Rights & Choices](#9-your-rights--choices)
+10. [Changes to This Policy](#10-changes-to-this-policy)
+11. [Consent](#11-consent)
+12. [Contact](#12-contact)
+
+---
 
 ## 1. Information We Collect
+Move 37 ("the App") uses the following services to provide advertising, analytics, crash reporting, and AI-powered game analysis. Each service collects data as described below.
 
-### 1.1 Data Collected Through Third-Party Services
+### 1.1 Google AdMob (Advertising SDK)
+We use Google AdMob to display advertisements. AdMob may collect:
+* **Advertising Identifier** — IDFA (iOS) / GAID (Android), used to deliver personalized ads
+* **Device information** — device model, OS version, screen resolution, language
+* **IP address** — used for approximate geolocation and fraud prevention
+* **Ad interaction data** — impressions, clicks, view duration
 
-The Application uses Google AdMob SDK to display advertisements. When you use the Application, Google AdMob may automatically collect the following information:
+Ad formats displayed: **Banner**, **Interstitial (full-screen)**, and **Rewarded Video**.
 
-- **Advertising Identifiers**: 
-  - iOS: Identifier for Advertisers (IDFA)
-  - Android: Android Advertising ID (AAID)
-- **Device Information**: Operating system type and version, device model
-- **IP Address**: Automatically collected by AdMob SDK as part of network requests (subject to AdMob's privacy policy)
+On iOS 14.5+, we request App Tracking Transparency (ATT) permission before accessing your IDFA. If you decline, only non-personalized ads are shown. On Android and in EEA/UK regions, a GDPR User Messaging Platform (UMP) consent dialog is presented before personalized ad delivery.
 
-**Important Note**: This data collection is performed by Google AdMob SDK, not directly by our Application. The collection and use of this data is governed by Google's Privacy Policy and AdMob's data practices. For more information, please review:
-- [Google Privacy Policy](https://policies.google.com/privacy)
-- [AdMob Privacy Information](https://support.google.com/admob/answer/6128543)
+[Google Privacy Policy →](https://policies.google.com/privacy)
 
-### 1.2 Data We Do NOT Collect
+### 1.2 Firebase Analytics
+We use Firebase Analytics (Google) to understand how users interact with the App. Firebase Analytics collects:
+* **App Instance ID** — a pseudonymous identifier per app installation
+* **Session data** — session start/end, session duration
+* **In-app events** — game start, game end, feature usage, screen views
+* **User properties** — language/locale, country, app version
+* **Ad revenue data** — aggregate AdMob impression and revenue events (linked via Firebase–AdMob integration)
+* **Device & OS information** — device model, OS version, app version
 
-The Application does **NOT** collect the following information:
+Firebase Analytics data is transmitted to Google's servers. You can opt out via device settings (see Section 9).
 
-- **Location Information**: The Application does not request location permissions and does not collect precise or approximate location data
-- **Personal Identifiable Information**: We do not collect names, email addresses, phone numbers, or any other personally identifiable information
-- **Gameplay Data Transmission**: All gameplay statistics, game state data, board positions, move history, game results, and player behavior analytics are stored **locally on your device only** and are **never transmitted** to external servers or services
+[Firebase Privacy →](https://firebase.google.com/support/privacy)
 
-### 1.3 Local Data Storage
+### 1.3 Firebase Crashlytics
+We use Firebase Crashlytics to automatically detect and diagnose app crashes. Crashlytics collects:
+* **Crash reports** — stack traces, error types, error messages
+* **Device information** — device model, OS version, available memory, CPU architecture
+* **App state** — app version, time of crash, whether device was jailbroken/rooted
+* **Crashlytics Installation UUID** — a pseudonymous per-install identifier
 
-The Application stores the following data **locally on your device** using browser localStorage:
+Crash data does **not** include personal information such as names, email addresses, or game content.
 
-- Game state data (board positions, move history, game results)
-- Gameplay statistics (win rate, games played, difficulty levels unlocked)
-- Game settings and preferences (selected difficulty levels, game type preferences, language settings)
-- Storage version and migration data
+[Firebase Privacy →](https://firebase.google.com/support/privacy)
 
-**This local data is never transmitted to external servers or third-party services.** It remains on your device and can be deleted by uninstalling the Application.
+### 1.4 AI Game Analysis — Google Gemini API
+Move 37 offers an optional AI-powered game analysis feature. When you request an analysis of a completed game, the following data is transmitted to Google's Gemini API:
+* **Move history** — the sequence of moves made during the game (no personal identifiers)
+* **Board state** — initial and final board layout
+* **Game metadata** — game type, difficulty level, winner, turn count, time remaining
+* **Locale** — your language preference (e.g., "en", "ko"), used to return analysis in your language
+* **IP address** — collected by our API server solely for rate-limiting purposes (5 requests/minute per IP); not stored persistently
+
+> **Important:** Game analysis data is transmitted to Google's Gemini API *only when you actively request an analysis*. This feature is entirely optional and can be ignored if you prefer not to send data externally.
+
+No personally identifiable information (name, email, user ID) is included in analysis requests. The data is used solely to generate the analysis response and is subject to [Google's Gemini API Terms of Service](https://ai.google.dev/gemini-api/terms) and [Google's Privacy Policy](https://policies.google.com/privacy).
+
+### 1.5 Locally Stored Data
+The following data is stored **only on your device** and is never transmitted to our servers:
+* Game settings and preferences (difficulty, theme)
+* Game history and statistics
+* Cached AI analysis results (to avoid redundant network requests)
+
+This data is stored in the app's local storage on your device. You can delete it by uninstalling the App.
+
+### 1.6 Data We Do NOT Collect
+> We do **not** collect: name, email address, phone number, precise location (GPS), payment information, contacts, photos, or any other personally identifiable information beyond what is described above.
+
+---
 
 ## 2. How We Use Information
 
-### 2.1 Advertising
+| Purpose | Data Used | Legal Basis (GDPR) |
+| :--- | :--- | :--- |
+| Display advertising (personalized or non-personalized) | Ad ID, device info, IP (AdMob) | Consent (EEA/UK) / Legitimate interest |
+| App performance & usage analytics | App Instance ID, events, user properties (Firebase Analytics) | Legitimate interest |
+| Ad revenue analysis | AdMob impression & revenue events (Firebase–AdMob integration) | Legitimate interest |
+| Crash detection & app stability | Crash logs, device info (Crashlytics) | Legitimate interest |
+| AI game analysis (on request) | Move history, board state, metadata, locale, IP (Gemini API) | Consent (implied by voluntary feature use) |
+| Local app functionality | On-device storage only | Contract performance |
 
-The advertising identifiers and device information collected by AdMob SDK are used by Google AdMob to:
-- Display relevant advertisements
-- Measure advertising performance
-- Provide personalized advertising experiences
-
-### 2.2 Local Data Usage
-
-Data stored locally on your device is used solely to:
-- Maintain game state and progress
-- Remember your preferences and settings
-- Provide game functionality
+---
 
 ## 3. Third-Party Services
+The App integrates the following third-party services, all operated by Google LLC:
 
-The Application uses the following third-party service:
+* **Google AdMob (Advertising)**: Mobile advertising platform. Processes advertising identifiers and device data to serve ads. [Privacy Policy](https://policies.google.com/privacy) · [Opt-out](https://support.google.com/ads/answer/2662922)
+* **Google Firebase Analytics (Analytics)**: App usage analytics. Processes app events, session data, and user properties. [Firebase Privacy](https://firebase.google.com/support/privacy) · [Opt-out](https://firebase.google.com/support/privacy#disable_firebase_analytics_collection)
+* **Google Firebase Crashlytics (Crash Reporting)**: Automated crash reporting. Processes stack traces and device metadata when the app crashes. [Firebase Privacy](https://firebase.google.com/support/privacy)
+* **Google Gemini API (AI Analysis)**: Generative AI service. Processes game move data to produce strategic analysis. Activated only on user request. [Terms of Service](https://ai.google.dev/gemini-api/terms) · [Privacy Policy](https://policies.google.com/privacy)
 
-### Google AdMob
+All four services may transfer data to the United States and other countries where Google operates. These transfers are governed by Google's Data Processing Terms and applicable Standard Contractual Clauses.
 
-The Application integrates Google AdMob SDK for advertising purposes. AdMob may collect and process data according to Google's Privacy Policy. We do not have control over AdMob's data collection practices.
+### iOS — SKAdNetwork
+On iOS, the App includes Apple's SKAdNetwork framework (registered in Info.plist) to support privacy-preserving advertising attribution. This framework does not transmit personal data; attribution is handled at the network level by Apple.
 
-**Third-Party Privacy Policies:**
-- [Google Privacy Policy](https://policies.google.com/privacy)
-- [AdMob Privacy Information](https://support.google.com/admob/answer/6128543)
+---
 
 ## 4. Data Sharing
+We do **not sell** your personal data. Data is shared only in the following circumstances:
+* **With Google** — via AdMob, Firebase Analytics, Crashlytics, and Gemini API as described in Section 3.
+* **Legal obligations** — if required by applicable law, court order, or governmental authority.
+* **Business transfer** — in the event of a merger, acquisition, or asset sale, user information may be transferred as part of that transaction, subject to the same privacy protections.
 
-### 4.1 What We Share
-
-We do **NOT** share any data collected or stored by our Application with third parties, except:
-
-- **AdMob SDK**: Advertising identifiers and device information are automatically shared with Google AdMob as part of the SDK's normal operation. This sharing is governed by Google's Privacy Policy.
-
-### 4.2 What We Do NOT Share
-
-We do **NOT** share:
-- Gameplay statistics
-- Game state data
-- Player behavior analytics
-- Any locally stored game data
-- Personal information (we do not collect this)
-
-## 5. Data Security
-
-### 5.1 Local Data Security
-
-All game data stored locally on your device is stored using standard browser localStorage mechanisms. This data is:
-- Stored only on your device
-- Not encrypted by the Application (localStorage is not encrypted by default)
-- Accessible only to the Application on your device
-
-### 5.2 Network Security
-
-The Application uses standard HTTPS connections for any network communication (such as AdMob SDK requests). However, the Application itself does not implement additional encryption for data transmission, as it does not transmit user data to external servers.
-
-## 6. Data Retention
-
-### 6.1 Local Data
-
-Data stored locally on your device will be retained as long as:
-- You have the Application installed on your device
-- You do not clear your device's app data or browser storage
-
-### 6.2 AdMob Data
-
-Data collected by AdMob SDK is retained according to Google's data retention policies. Please refer to Google's Privacy Policy for details.
-
-### 6.3 Data Deletion
-
-You can delete all locally stored data by:
-- Uninstalling the Application
-- Clearing the Application's data through your device settings
-
-To request deletion of any data that may have been collected, please contact us at: **visionary.0419@gmail.com**
-
-## 7. Children's Privacy
-
-The Application does not knowingly collect personal information from children under the age of 13. The Application is not directed to children under 13 years of age.
-
-If you are a parent or guardian and believe that your child under 13 has provided us with personal information, please contact us at **visionary.0419@gmail.com** and we will take steps to delete such information.
-
-## 8. Your Rights and Choices
-
-### 8.1 Opt-Out of Data Collection
-
-You can stop all data collection by the Application by:
-- Uninstalling the Application
-- Disabling advertising tracking in your device settings:
-  - **iOS**: Settings > Privacy > Tracking
-  - **Android**: Settings > Google > Ads > Reset advertising ID / Opt out of Ads Personalization
-
-### 8.2 AdMob Opt-Out
-
-To opt out of personalized advertising from Google AdMob:
-- Visit [Google's Ad Settings](https://adssettings.google.com/)
-- Follow the instructions to opt out of personalized ads
-
-**Note**: Opting out may affect the relevance of advertisements but will not prevent ads from being displayed.
-
-## 9. Changes to This Privacy Policy
-
-We may update this Privacy Policy from time to time. We will notify you of any changes by:
-- Updating the "Last Updated" date at the top of this Privacy Policy
-- Posting the new Privacy Policy in the Application or on our website
-
-You are advised to review this Privacy Policy periodically for any changes. Your continued use of the Application after any changes constitutes your acceptance of the new Privacy Policy.
-
-## 10. Your Consent
-
-By using the Application, you consent to:
-- The collection and use of information by AdMob SDK as described in this Privacy Policy
-- The local storage of game data on your device
-- This Privacy Policy and any amendments
-
-## 11. Contact Us
-
-If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:
-
-**Email**: visionary.0419@gmail.com
-
-We will respond to your inquiry within a reasonable time.
+No other third-party sharing occurs.
 
 ---
 
-**This Privacy Policy is effective as of January 13, 2026.**
+## 5. GDPR & Privacy Rights
+
+### 5.1 User Messaging Platform (UMP) Consent
+Users in the European Economic Area (EEA), United Kingdom, and Switzerland are shown a **GDPR consent dialog** on first launch, implemented via Google's User Messaging Platform (UMP). This dialog allows you to:
+* Accept personalized advertising (requires consent)
+* Accept only non-personalized advertising
+* Manage your consent preferences at any time
+
+Personalized ads are only delivered after affirmative consent. If you decline or limit consent, non-personalized ads are shown instead.
+
+### 5.2 Your Rights Under GDPR (EEA/UK Users)
+If you are located in the EEA, UK, or Switzerland, you have the following rights under GDPR / UK GDPR:
+* **Right of access** — request a copy of data held about you
+* **Right to rectification** — request correction of inaccurate data
+* **Right to erasure** — request deletion of your data ("right to be forgotten")
+* **Right to restriction** — request that we limit processing
+* **Right to data portability** — receive your data in a structured, machine-readable format
+* **Right to object** — object to processing based on legitimate interests
+* **Right to withdraw consent** — withdraw consent at any time (affects future processing only)
+
+To exercise these rights, contact us at [visionary.0419@gmail.com](mailto:visionary.0419@gmail.com). For data held by Google, you may also contact Google directly through their privacy portal.
+
+You have the right to lodge a complaint with your local data protection authority (DPA).
+
+### 5.3 Legal Basis Summary
+| Processing Activity | Legal Basis |
+| :--- | :--- |
+| Personalized advertising (AdMob) | Consent (Art. 6(1)(a) GDPR) |
+| App analytics (Firebase Analytics) | Legitimate interest (Art. 6(1)(f) GDPR) |
+| Crash reporting (Crashlytics) | Legitimate interest (Art. 6(1)(f) GDPR) |
+| AI game analysis (Gemini) | Consent via voluntary use (Art. 6(1)(a) GDPR) |
 
 ---
 
-*Move 37 is a mobile game application that provides on-device AI strategy gaming experiences. We are committed to protecting your privacy and being transparent about our data practices.*
+## 6. Data Security
+We take reasonable technical and organizational measures to protect your data:
+* API communications are encrypted using HTTPS/TLS.
+* The Gemini API key is stored only on the server side and is never exposed to client applications.
+* We do not maintain our own user databases; data processing is delegated to Google's infrastructure, which maintains its own security certifications (ISO 27001, SOC 2).
+
+---
+
+## 7. Data Retention
+| Data Type | Retention Period | Controlled By |
+| :--- | :--- | :--- |
+| AdMob advertising identifiers & interaction data | Up to 63 days (Google standard) | Google LLC |
+| Firebase Analytics event data | 2 months or 14 months (configurable by developer) | Google LLC |
+| Firebase Crashlytics crash reports | 90 days | Google LLC |
+| Gemini API — game data sent for analysis | Data used to generate the response; subject to Google's API data retention policy | Google LLC |
+| IP address (rate limiting) | Not persisted; held only in-memory during request processing | Our API server |
+| Local device data (settings, history, cached analysis) | Until app is uninstalled or storage is cleared | User |
+
+For details on Google's data retention practices, see [Google's Data Retention Policy](https://policies.google.com/technologies/retention).
+
+---
+
+## 8. Children's Privacy
+Move 37 is not directed at children under the age of 13 (or under 16 in the EEA). We do not knowingly collect personal data from children. If we become aware that a child has provided personal information, we will take steps to delete it.
+
+If you are a parent or guardian and believe your child has used the App, please contact us at [visionary.0419@gmail.com](mailto:visionary.0419@gmail.com).
+
+---
+
+## 9. Your Rights & Choices
+
+### Advertising Personalization Opt-out
+* **iOS:** Go to *Settings → Privacy & Security → Tracking* and disable "Allow Apps to Request to Track". When ATT permission is denied, Move 37 shows non-personalized ads only.
+* **Android:** Go to *Settings → Google → Ads → Delete advertising ID* or enable "Opt out of Ads Personalization".
+* **In-app (EEA/UK):** Use the GDPR consent dialog shown at first launch to manage your advertising preferences.
+
+### Firebase Analytics Opt-out
+* You may opt out of Firebase Analytics data collection by disabling analytics tracking in the device settings (both iOS and Android provide per-app tracking settings).
+* Alternatively, contact us at [visionary.0419@gmail.com](mailto:visionary.0419@gmail.com) to request opt-out processing.
+
+### AI Game Analysis
+Using the AI analysis feature is entirely voluntary. If you do not want game data transmitted to Google's Gemini API, simply do not use the "Analyze Game" feature.
+
+### iOS App Tracking Transparency (ATT)
+On iOS 14.5 and later, when you first open Move 37, you will be prompted by the system ATT dialog asking whether to allow tracking across apps and websites. If you select **"Ask App Not to Track"**, the App will:
+* Not access your IDFA
+* Display only non-personalized advertisements
+* Otherwise function normally with no feature restrictions
+
+### Deleting Local Data
+You can delete all locally stored data by uninstalling the App from your device.
+
+---
+
+## 10. Changes to This Policy
+We may update this Privacy Policy from time to time. When we do, we will update the "Last Updated" date at the top of this page. For significant changes, we will provide in-app notification.
+
+We encourage you to review this policy periodically. Continued use of the App after changes constitutes acceptance of the revised policy.
+
+---
+
+## 11. Consent
+By downloading and using Move 37, you consent to the data practices described in this Privacy Policy. Where applicable law requires explicit consent (e.g., GDPR for personalized advertising), we obtain that consent through in-app consent dialogs before processing begins.
+
+---
+
+## 12. Contact
+If you have questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact:
+
+**Move 37 — Developer**  
+Email: [visionary.0419@gmail.com](mailto:visionary.0419@gmail.com)  
+GitHub: [github.com/kai-0419](https://github.com/kai-0419)
+
+We aim to respond to all inquiries within 30 days.
+
+---
+© 2026 Move 37. All rights reserved.
