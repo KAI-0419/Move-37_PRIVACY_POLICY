@@ -1,7 +1,7 @@
 # Privacy Policy
 
 **Move 37 — Board Game App**  
-**Last Updated:** February 15, 2026
+**Last Updated:** February 22, 2026
 
 ---
 
@@ -37,16 +37,20 @@ On iOS 14.5+, we request App Tracking Transparency (ATT) permission before acces
 
 [Google Privacy Policy →](https://policies.google.com/privacy)
 
-### 1.2 AppLovin (Advertising Partner)
-We may use AppLovin to optimize ad delivery. AppLovin may collect:
-* **Device Make, Model, and OS**
-* **Mobile Carrier & Language Settings**
-* **IP Address**
-* **Advertising ID (IDFA/GAID)**
+### 1.2 Meta Audience Network (AdMob Mediation)
+We use Meta Audience Network (operated by Meta Platforms, Inc.) as a mediation partner for advertisements. When the App displays ads from Meta, Meta may collect:
+* **Advertising Identifier** — IDFA (iOS) / GAID (Android)
+* **App usage data** — interactions with ads and the App
+* **Device technical information** — OS version, device model, mobile carrier
+* **IP address** — used for approximate location and fraud prevention
 
-[AppLovin Privacy Policy →](https://legal.applovin.com/privacy)
+Meta use this data to provide localized and personalized advertising. For more information on how Meta processes your information, please visit [Meta's Privacy Policy](https://www.facebook.com/about/privacy/).
 
-### 1.3 Firebase Analytics
+### 1.3 AppLovin (Ad Mediation)
+
+We work with AppLovin to deliver ads in our app. AppLovin and its partners may collect device identifiers, usage data, and other information for advertising and analytics purposes. For more information, visit: [https://www.applovin.com/privacy/](https://www.applovin.com/privacy/)
+
+### 1.4 Firebase Analytics
 We use Firebase Analytics (Google) to understand how users interact with the App. Firebase Analytics collects:
 * **App Instance ID** — a pseudonymous identifier per app installation
 * **Session data** — session start/end, session duration
@@ -59,7 +63,7 @@ Firebase Analytics data is transmitted to Google's servers. You can opt out via 
 
 [Firebase Privacy →](https://firebase.google.com/support/privacy)
 
-### 1.4 Firebase Crashlytics
+### 1.5 Firebase Crashlytics
 We use Firebase Crashlytics to automatically detect and diagnose app crashes. Crashlytics collects:
 * **Crash reports** — stack traces, error types, error messages
 * **Device information** — device model, OS version, available memory, CPU architecture
@@ -70,7 +74,7 @@ Crash data does **not** include personal information such as names, email addres
 
 [Firebase Privacy →](https://firebase.google.com/support/privacy)
 
-### 1.5 AI Game Analysis — Google Gemini API
+### 1.6 AI Game Analysis — Google Gemini API
 Move 37 offers an optional AI-powered game analysis feature. When you request an analysis of a completed game, the following data is transmitted to Google's Gemini API:
 * **Move history** — the sequence of moves made during the game (no personal identifiers)
 * **Board state** — initial and final board layout
@@ -99,7 +103,7 @@ This data is stored in the app's local storage on your device. You can delete it
 
 | Purpose | Data Used | Legal Basis (GDPR) |
 | :--- | :--- | :--- |
-| Display advertising (personalized or non-personalized) | Ad ID, device info, IP (AdMob, AppLovin) | Consent (EEA/UK) / Legitimate interest |
+| Display advertising (personalized or non-personalized) | Ad ID, device info, IP (AdMob, Meta) | Consent (EEA/UK) / Legitimate interest |
 | App performance & usage analytics | App Instance ID, events, user properties (Firebase Analytics) | Legitimate interest |
 | Ad revenue analysis | AdMob impression & revenue events (Firebase–AdMob integration) | Legitimate interest |
 | Crash detection & app stability | Crash logs, device info (Crashlytics) | Legitimate interest |
@@ -112,12 +116,12 @@ This data is stored in the app's local storage on your device. You can delete it
 The App integrates the following third-party services, all operated by Google LLC:
 
 * **Google AdMob (Advertising)**: Mobile advertising platform. Processes advertising identifiers and device data to serve ads. [Privacy Policy](https://policies.google.com/privacy) · [Opt-out](https://support.google.com/ads/answer/2662922)
-* **AppLovin (Advertising)**: Mobile advertising partner. Processes device data and advertising IDs to serve ads. [Privacy Policy](https://legal.applovin.com/privacy) · [Opt-out](https://dash.applovin.com/p/how-applovin-shows-you-ads)
+* **Meta Audience Network (Advertising)**: AdMob mediation partner. Processes device identifiers and interaction data to serve personalized ads. [Privacy Policy](https://www.facebook.com/about/privacy/) · [Ad settings](https://www.facebook.com/help/568137493302217)
 * **Google Firebase Analytics (Analytics)**: App usage analytics. Processes app events, session data, and user properties. [Firebase Privacy](https://firebase.google.com/support/privacy) · [Opt-out](https://firebase.google.com/support/privacy#disable_firebase_analytics_collection)
 * **Google Firebase Crashlytics (Crash Reporting)**: Automated crash reporting. Processes stack traces and device metadata when the app crashes. [Firebase Privacy](https://firebase.google.com/support/privacy)
 * **Google Gemini API (AI Analysis)**: Generative AI service. Processes game move data to produce strategic analysis. Activated only on user request. [Terms of Service](https://ai.google.dev/gemini-api/terms) · [Privacy Policy](https://policies.google.com/privacy)
 
-All four services may transfer data to the United States and other countries where Google operates. These transfers are governed by Google's Data Processing Terms and applicable Standard Contractual Clauses.
+All five services may transfer data to the United States and other countries where Google or Meta operates. These transfers are governed by their respective Data Processing Terms and Standard Contractual Clauses.
 
 ### iOS — SKAdNetwork
 On iOS, the App includes Apple's SKAdNetwork framework (registered in Info.plist) to support privacy-preserving advertising attribution. This framework does not transmit personal data; attribution is handled at the network level by Apple.
@@ -126,7 +130,7 @@ On iOS, the App includes Apple's SKAdNetwork framework (registered in Info.plist
 
 ## 4. Data Sharing
 We do **not sell** your personal data. Data is shared only in the following circumstances:
-* **With Google & AppLovin** — via AdMob, AppLovin, Firebase Analytics, Crashlytics, and Gemini API as described in Section 3.
+* **With Google & Meta** — via AdMob, Meta Audience Network, Firebase Analytics, Crashlytics, and Gemini API as described in Section 3.
 * **Legal obligations** — if required by applicable law, court order, or governmental authority.
 * **Business transfer** — in the event of a merger, acquisition, or asset sale, user information may be transferred as part of that transaction, subject to the same privacy protections.
 
@@ -161,7 +165,7 @@ You have the right to lodge a complaint with your local data protection authorit
 ### 5.3 Legal Basis Summary
 | Processing Activity | Legal Basis |
 | :--- | :--- |
-| Personalized advertising (AdMob, AppLovin) | Consent (Art. 6(1)(a) GDPR) |
+| Personalized advertising (AdMob, Meta) | Consent (Art. 6(1)(a) GDPR) |
 | App analytics (Firebase Analytics) | Legitimate interest (Art. 6(1)(f) GDPR) |
 | Crash reporting (Crashlytics) | Legitimate interest (Art. 6(1)(f) GDPR) |
 | AI game analysis (Gemini) | Consent via voluntary use (Art. 6(1)(a) GDPR) |
@@ -180,7 +184,7 @@ We take reasonable technical and organizational measures to protect your data:
 | Data Type | Retention Period | Controlled By |
 | :--- | :--- | :--- |
 | AdMob advertising identifiers & interaction data | Up to 63 days (Google standard) | Google LLC |
-| AppLovin advertising data | Up to 2 years | AppLovin Corp. |
+| Meta Audience Network data | Up to 2 years or as long as necessary for the purpose | Meta Platforms, Inc. |
 | Firebase Analytics event data | 2 months or 14 months (configurable by developer) | Google LLC |
 | Firebase Crashlytics crash reports | 90 days | Google LLC |
 | Gemini API — game data sent for analysis | Data used to generate the response; subject to Google's API data retention policy | Google LLC |
